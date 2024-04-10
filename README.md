@@ -1,1 +1,1 @@
-# Vue 3 + TypeScript + Vite 5 Template
+# Vue 3 + TypeScript + Vite 5
