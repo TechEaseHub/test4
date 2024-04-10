@@ -1,21 +1,15 @@
 import { createApp } from 'vue'
 
-import { createPinia } from 'pinia'
-import { createPersistedState } from 'pinia-plugin-persistedstate'
-import { router } from './router'
+import ElementPlus from 'element-plus'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
+import 'element-plus/dist/index.css'
 
 import App from './App.vue'
-import 'uno.css'
 
 const app = createApp(App)
-const pinia = createPinia()
-pinia.use(
-	createPersistedState({
-		key: id => `__${id}`,
-	}),
-)
 
-app.use(router)
-app.use(pinia)
+app.use(ElementPlus, {
+	locale: zhCn,
+})
 
 app.mount('#app')
